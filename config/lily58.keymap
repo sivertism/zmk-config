@@ -65,16 +65,16 @@
 
                 raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   *   |  7  |  8  |  9   |  =   |      |                   |      |       |       |      |       |       |
-// |   /   |  4  |  5  |  6   |  -   |      |                   | <-   |   v   |  ^    |  ->  | PG_UP | PG_DN |
-// |       |  1  |  2  |  3   |  +   |      |        |  |       |      |       |       |      |       |       |
-//                     |      |      |      |        |  |       |      |       |       |
+// |      |       |     |     |      |      |                   |      |       |       |      |       |       |
+// |      |   *   |  7  |  8  |  9   |  =   |                   |      |       |       |      |       |       |
+// |      |   /   |  4  |  5  |  6   |  -   |                   | <-   |   v   |  ^    |  ->  | PG_UP | PG_DN |
+// |      |       |  1  |  2  |  3   |  +   |        |  |       |      |       |       |      |       |       |
+//                            |      |      |        |  |       |      |       |       |
                         bindings = <
-&trans          &trans &trans &trans  &trans     &trans                      &trans      &trans    &trans    &trans     &trans    &trans
-&kp KP_MULTIPLY &kp N7 &kp N8 &kp N9  &kp EQUAL  &trans                      &trans      &trans    &trans    &trans     &trans    &trans
-&kp FSLH        &kp N4 &kp N5 &kp N6  &kp MINUS  &trans                      &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP &kp PG_DN
-&trans          &kp N1 &kp N2 &kp N3 &kp KP_PLUS &trans   &trans   &trans    &trans      &trans    &trans    &trans     &trans    &trans
+&trans  &trans          &trans &trans &trans  &trans                         &trans      &trans    &trans    &trans     &trans    &trans
+&trans  &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9  &kp EQUAL                      &trans      &trans    &trans    &trans     &trans    &trans
+&trans  &kp FSLH        &kp N4 &kp N5 &kp N6  &kp MINUS                      &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP &kp PG_DN
+&trans  &trans          &kp N1 &kp N2 &kp N3 &kp KP_PLUS  &trans   &trans    &trans      &trans    &trans    &trans     &trans    &trans
                         &trans  &trans  &trans   &trans   &trans   &trans    &trans      &trans
                         >;
 
