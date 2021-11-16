@@ -27,16 +27,16 @@
 
                 default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  LCTRL |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
-// |  TAB |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | TILDE |
-// |  ESC |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// |  SHIFT  |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | CTRL   |
+// |  LCTRL |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | -  |
+// |  TAB   |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | `~ |
+// |  ESC   |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | '  |
+// |  SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | += |
+//                      | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | CTRL  |
                         bindings = <
 &kp LCTRL       &kp N1 &kp N2      &kp N3      &kp N4      &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB         &kp Q  &kp W       &kp E       &kp R       &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp TILDE
+&kp TAB         &kp Q  &kp W       &kp E       &kp R       &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp GRAVE
 &mt LCTRL ESC   &kp A  &kp S       &kp D       &kp F       &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT       &kp Z  &kp X       &kp C       &kp V       &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp HASH
+&kp LSHFT       &kp Z  &kp X       &kp C       &kp V       &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp EQUAL
                        &kp LALT    &kp LGUI &mo 1  &mt LSHFT SPACE  &mt LCTRL RET  &mo 2  &kp BSPC &kp LCTRL
                         >;
 
@@ -68,13 +68,13 @@
 // |      |       |     |     |      |      |                   |      |       |       |      |       |       |
 // |      |   *   |  7  |  8  |  9   |  =   |                   |      |       |       |      |       |       |
 // |      |   /   |  4  |  5  |  6   |  -   |                   | <-   |   v   |  ^    |  ->  | PG_UP | PG_DN |
-// |      |   0   |  1  |  2  |  3   |  +   |        |  |       |      |       |       |      |       |       |
+// |      |   0   |  1  |  2  |  3   |  +   |        |  |       |      |   [   |  ]    |      |       |       |
 //                            |      |      |        |  |       |      |       |       |
                         bindings = <
 &trans  &trans          &trans &trans &trans  &trans                         &trans      &trans    &trans    &trans     &trans    &trans
 &trans  &kp KP_MULTIPLY &kp N7 &kp N8 &kp N9  &kp EQUAL                      &trans      &trans    &trans    &trans     &trans    &trans
 &trans  &kp FSLH        &kp N4 &kp N5 &kp N6  &kp MINUS                      &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP &kp PG_DN
-&trans  &kp N0          &kp N1 &kp N2 &kp N3 &kp KP_PLUS  &trans   &trans    &trans      &trans    &trans    &trans     &trans    &trans
+&trans  &kp N0          &kp N1 &kp N2 &kp N3 &kp KP_PLUS  &trans   &trans    &trans      &kp LBKT  &RBKT     &trans     &trans    &trans
                         &trans  &trans  &trans   &trans   &trans   &trans    &trans      &trans
                         >;
 
