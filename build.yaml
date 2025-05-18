@@ -23,3 +23,5 @@ include:
     shield: lily58_left
   - board: nrfmicro_13
     shield: lily58_right
+  - board: nrfmicro_13
+    shield: settings_reset
