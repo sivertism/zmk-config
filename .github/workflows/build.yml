@@ -43,7 +43,7 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 lily58_left_nrfmicro_13.uf2
       - name: Archive (Lily58 Left)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware
           path: lily58_left_nrfmicro_13.uf2
@@ -55,7 +55,7 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 lily58_right_nrfmicro_13.uf2
       - name: Archive (Lily58 Right)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware
           path: lily58_right_nrfmicro_13.uf2
