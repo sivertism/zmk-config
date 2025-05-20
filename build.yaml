@@ -20,8 +20,10 @@
 ---
 include:
   - board: nrfmicro_13
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     shield: lily58_left
-  - board: nrfmicro_13
+  - bord: nrfmicro_13
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     shield: lily58_right
   - board: nrfmicro_13
     shield: settings_reset
