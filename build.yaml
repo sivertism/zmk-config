@@ -21,9 +21,17 @@
 include:
   - board: nrfmicro_13
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart
     shield: lily58_left
   - board: nrfmicro_13
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
     shield: lily58_right
+    
+  - board: nrfmicro_13
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: nrfmicro_13
+    shield: corne_right
+    
   - board: nrfmicro_13
     shield: settings_reset
