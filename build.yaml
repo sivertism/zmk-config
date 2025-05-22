@@ -22,7 +22,7 @@ include:
   - board: nrfmicro_13
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     shield: lily58_left
-  - bord: nrfmicro_13
+  - board: nrfmicro_13
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     shield: lily58_right
   - board: nrfmicro_13
