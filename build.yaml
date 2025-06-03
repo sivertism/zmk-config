@@ -39,6 +39,13 @@ include:
     shield: lily58_left
   - board: nice_nano_v2
     shield: lily58_right
+        
+  - board: nice_nano_v2
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: nrfmicro_13
+    shield: corne_right
     
   - board: nrfmicro_13
     shield: settings_reset
