@@ -35,6 +35,13 @@ include:
     shield: lily58_left
   - board: nice_nano_v2
     shield: lily58_right
+
+  - board: nice_nano_v2
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
+    shield: cradio_left
+  - board: nice_nano_v2
+    cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
+    shield: cradio_right
   
   - board: nice_nano_v2
     shield: settings_reset
