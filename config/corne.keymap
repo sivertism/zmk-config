@@ -52,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans     &trans    &trans  &trans     &trans      &trans         &kp CARET  &kp PAGE_UP        &kp PAGE_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BSPC
-&kp GRAVE  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp LEFT   &kp DOWN           &kp UP       &kp RIGHT         &kp HOME           &kp END
-&trans     &trans    &trans  &trans     &trans      &trans         &kp UNDER  &kp LS(PAGE_DOWN)  &kp PG_DN    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BSLH
-                             &trans     &mo 3       &trans         &trans     &trans             &kp DEL
+&trans     &trans    &trans  &trans     &trans      &trans         &trans     &kp PAGE_UP  &trans   &trans     &trans    &trans
+&kp GRAVE  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR  &kp PERCENT    &kp LEFT   &kp DOWN     &kp UP   &kp RIGHT  &kp HOME  &kp END
+&trans     &trans    &trans  &trans     &trans      &trans         &kp UNDER  &kp PG_DN    &trans   &trans     &trans    &trans
+                             &trans     &mo 3       &trans         &trans     &trans       &kp DEL
             >;
         };
 
