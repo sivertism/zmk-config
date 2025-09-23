@@ -11,6 +11,36 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "home-modifier-left";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "home-row-right";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,10 +52,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q            &kp W  &kp E     &kp R  &kp T                   &kp Y                     &kp U  &kp I          &kp O    &kp P              &mt RIGHT_META GRAVE
-&mt LCTRL ESC  &kp A            &kp S  &kp D     &kp F  &kp G                   &kp H                     &kp J  &kp K          &kp L    &kp SEMI           &mt RCTRL APOSTROPHE
-&kp LSHFT      &mt RIGHT_ALT Z  &kp X  &kp C     &kp V  &kp B                   &kp N                     &kp M  &kp COMMA      &kp DOT  &mt LEFT_ALT FSLH  &mt RIGHT_SHIFT BACKSLASH
-                                       &kp LGUI  &mo 1  &mt LEFT_SHIFT SPACE    &mt RIGHT_CONTROL RETURN  &mo 2  &kp BACKSPACE
+&kp TAB        &kp Q              &kp W                &kp E            &kp R        &kp T                   &kp Y                     &kp U        &kp I             &kp O         &kp P                       &kp GRAVE
+&mt LCTRL ESC  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F  &kp G                   &kp H                     &hmr RGUI J  &hmr RIGHT_ALT K  &hmr L RCTRL  &hmr RIGHT_SHIFT SEMICOLON  &kp SINGLE_QUOTE
+&kp LSHFT      &mt RIGHT_ALT Z    &kp X                &kp C            &kp V        &kp B                   &kp N                     &kp M        &kp COMMA         &kp DOT       &kp SLASH                   &kp BSLH
+                                                       &kp LGUI         &mo 1        &mt LEFT_SHIFT SPACE    &mt RIGHT_CONTROL RETURN  &mo 2        &kp BACKSPACE
             >;
         };
 
