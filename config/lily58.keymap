@@ -37,6 +37,16 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 50 51 52 3 4 5 15 16 17 27 28 29 39 40 41 42 50 51 52 53>;
             hold-trigger-on-release;
         };
+
+        mylt: mylt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MYLT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -51,11 +61,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC        &kp N1             &kp N2        &kp N3           &kp N4           &kp N5                                         &kp N6  &kp N7        &kp N8            &kp N9                &kp N0                 &kp MINUS
-&kp TAB        &kp Q              &kp W         &kp E            &kp R            &kp T                                          &kp Y   &kp U         &kp I             &kp O                 &kp P                  &kp GRAVE
-&mt LCTRL ESC  &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G                                          &kp H   &hmr RMETA J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp CARET
-&kp LSHFT      &mt LEFT_ALT Z     &kp X         &kp C            &kp V            &kp B   &kp LBKT                &kp RBKT       &kp N   &kp M         &kp COMMA         &kp DOT               &kp SLASH              &kp BSLH
-                                                &kp LALT         &kp LGUI         &mo 1   &mt LEFT_SHIFT SPACE    &mt RCTRL RET  &mo 2   &kp BSPC      &kp RGUI
+&kp ESC        &kp N1             &kp N2        &kp N3           &kp N4           &kp N5                                              &kp N6  &kp N7        &kp N8            &kp N9                &kp N0                 &kp MINUS
+&kp TAB        &kp Q              &kp W         &kp E            &kp R            &kp T                                               &kp Y   &kp U         &kp I             &kp O                 &kp P                  &kp GRAVE
+&mt LCTRL ESC  &hml LEFT_SHIFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G                                               &kp H   &hmr RMETA J  &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp CARET
+&kp LSHFT      &mt LEFT_ALT Z     &kp X         &kp C            &kp V            &kp B        &kp LBKT                &kp RBKT       &kp N   &kp M         &kp COMMA         &kp DOT               &kp SLASH              &kp BSLH
+                                                &kp LALT         &kp LGUI         &mylt 1 ESC  &mt LEFT_SHIFT SPACE    &mt RCTRL RET  &mo 2   &kp BSPC      &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -70,11 +80,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans         &trans            &trans            &trans             &trans
-&trans  &kp TAB     &kp N7        &kp N8        &kp N9        &kp MINUS                       &kp BSLH   &kp PIPE       &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp ESCAPE  &kp N4        &kp N5        &kp N6        &kp PLUS                        &kp CARET  &kp AMPS       &kp ASTRK         &kp LPAR          &kp RPAR           &kp PIPE
-&trans  &kp N0      &kp N1        &kp N2        &kp N3        &kp EQUAL     &trans    &trans  &kp MINUS  &kp LESS_THAN  &kp GREATER_THAN  &kp LBRC          &kp RBRC           &trans
-                                  &trans        &trans        &trans        &trans    &trans  &mo 3      &kp DEL        &trans
+&trans  &trans      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans             &trans         &trans            &trans            &trans             &trans
+&trans  &kp TAB     &kp N7        &kp N8        &kp N9        &kp MINUS                       &kp BSLH           &kp PIPE       &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp ESCAPE  &kp N4        &kp N5        &kp N6        &kp PLUS                        &kp CARET          &kp AMPS       &kp ASTRK         &kp LPAR          &kp RPAR           &kp PIPE
+&trans  &kp N0      &kp N1        &kp N2        &kp N3        &kp EQUAL     &trans    &trans  &kp MINUS          &kp LESS_THAN  &kp GREATER_THAN  &kp LBRC          &kp RBRC           &trans
+                                  &trans        &trans        &trans        &trans    &trans  &mylt 3 BACKSPACE  &kp DEL        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
