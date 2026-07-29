@@ -43,5 +43,5 @@ include:
     cmake-args: -DCONFIG_ZMK_SLEEP=y -DCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
     shield: cradio_right
   
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
